@@ -1,3 +1,21 @@
 # Python 爬虫学习
-- urllib库使用
-
+1. urllib库使用
+    - urlopen
+    - urlretrieve
+    - urlencode
+    - url解析
+    - Requests类
+    - ProxyHandler
+    - cookie处理
+2. requests库使用
+    - get
+    - post
+    - proxy
+    - cookie处理
+    - ssl
+3. 数据解析
+    - Xpath语法和lxml库
+        - 了解并熟练Xpath语法
+        - 熟练lxml库基本使用
+    - BeautifulSoup4库
+    - 正则表达式和re模块

@@ -19,3 +19,8 @@
         - 熟练lxml库基本使用
     - BeautifulSoup4库
     - 正则表达式和re模块
+4. 数据存储
+    - JSON文件格式处理
+    - CSV文件格式处理
+    - Excel文件处理
+    - MySQL数据库处理

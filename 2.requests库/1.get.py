@@ -12,6 +12,6 @@ print(response)
 # 属性
 # 查询响应内容
 print(response.text)  # 返回unicode格式的数据，会猜测编码方式进行转码
-print(response.content)  # 返回字节流数据 若上面打印乱码，可以使用 res.content.decode('utf-8)
+print(response.content)  # 返回字节流数据 若上面打印乱码，可以使用 res.content.decode('utf-8')
 print(response.url)  # 查看完整url地址
 print(response.encoding)  # 查看响应头部字符编码

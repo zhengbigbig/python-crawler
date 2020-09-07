@@ -1,6 +1,5 @@
 import requests
 import os
-import json
 from urllib import parse
 from urllib import request
 
@@ -36,6 +35,6 @@ def parse_data_and_download(url):
 
 def main():
 	base_url = 'https://apps.game.qq.com/cgi-bin/ams/module/ishow/V1.0/query/workList_inc.cgi?activityId=2735&sVerifyCode=ABCD&sDataType=JSON&iListNum=20&totalpage=0&page={}&iOrder=0&iSortNumClose=1&iAMSActivityId=51991&_everyRead=true&iTypeId=2&iFlowId=267733&iActId=2735&iModuleId=2735&_=1599298764677'
-	for i in range(0, 1):
+	for i in range(0, 24):
 		target_url = base_url.format(i)
 		parse_data_and_download(target_url)

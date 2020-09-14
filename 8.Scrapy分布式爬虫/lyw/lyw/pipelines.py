@@ -39,6 +39,7 @@ class LywPipeline:
 	def process_item(self, item, spider):
 		# 运行插入sql语句的函数
 		result = self.dbPool.runInteraction(self.insert_item, item)
+		# 错误监听，如果出现错误，会执行insert_error
 		result.addErrback(self.insert_error)
 		return item
 
@@ -54,3 +55,7 @@ class LywPipeline:
 		print('=' * 30)
 		print(failure)
 		print('=' * 30)
+
+	def close_spider(self, spider):
+		# 爬虫结束关闭连接池
+		self.dbPool.close()

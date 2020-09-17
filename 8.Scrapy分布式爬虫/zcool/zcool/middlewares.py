@@ -69,6 +69,7 @@ class ZcoolDownloaderMiddleware:
         return s
 
     def process_request(self, request, spider):
+        # 下载到达请求之前会执行
         # Called for each request that goes through the downloader
         # middleware.
 
@@ -81,6 +82,7 @@ class ZcoolDownloaderMiddleware:
         return None
 
     def process_response(self, request, response, spider):
+        # 下载到达之前会执行
         # Called with the response returned from the downloader.
 
         # Must either;

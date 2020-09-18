@@ -8,4 +8,5 @@ class MiddlewareStudySpider(scrapy.Spider):
 
 	def parse(self, response):
 		print(response.text,'text')
+		print(response.url)
 		yield scrapy.Request(self.start_urls[0], dont_filter=True)

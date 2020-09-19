@@ -2,12 +2,14 @@ import scrapy
 from ..items import LianjiaItem
 import re
 import json
+from scrapy_redis.spiders import RedisSpider
 
 
-class LianjiaSpiderSpider(scrapy.Spider):
+class LianjiaSpiderSpider(RedisSpider):
 	name = 'lianjia_spider'
 	allowed_domains = ['lianjia.com']
-	start_urls = ['https://www.lianjia.com/city/']
+	# start_urls = ['https://www.lianjia.com/city/']
+	redis_key = 'lianjia'
 
 	def parse(self, response):
 		city_tags = response.css(".city_list_ul a")
